@@ -58,7 +58,7 @@ def ask_random_rus_word():
 
         
 # Display Dictionary picture
-# If you need to cut an Image use - https://photoscissors.com/
+
 
 image = QPixmap("dictionary_1.png")
 dict = QLabel()
