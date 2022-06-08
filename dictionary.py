@@ -12,7 +12,7 @@ from css_styles import *
 
 app = QApplication(sys.argv)
 window = QWidget()
-window.setWindowTitle("A EN-RU dictionary")
+window.setWindowTitle("An EN-RU dictionary")
 window.setFixedWidth(900)
 window.setFixedHeight(900)
 window.setStyleSheet("background: #7C1FA7")
