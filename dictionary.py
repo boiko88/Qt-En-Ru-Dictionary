@@ -1,10 +1,9 @@
 import csv
 import sys
-from PyQt5.QtWidgets import QApplication, QLabel, QPushButton, QVBoxLayout, QWidget, QFileDialog, QGridLayout, QLineEdit
+from PyQt5.QtWidgets import QApplication, QLabel, QPushButton, QWidget, QGridLayout, QLineEdit
 from PyQt5.QtGui import QPixmap
-from PyQt5 import QtGui, QtCore
+from PyQt5 import QtCore
 from PyQt5.QtGui import QCursor
-from tkcalendar import DateEntry
 import random
 from css_styles import *
 
@@ -13,7 +12,7 @@ from css_styles import *
 
 app = QApplication(sys.argv)
 window = QWidget()
-window.setWindowTitle("It's just a test")
+window.setWindowTitle("A EN-RU dictionary")
 window.setFixedWidth(900)
 window.setFixedHeight(900)
 window.setStyleSheet("background: #7C1FA7")
@@ -24,9 +23,6 @@ eng_dict = []
 rus_dict = []
 
 # Functions 
-
-def test_function():
-    print("It actually works")
 
 def add_russian_word():
     actual_new_ru_word = new_rus_entry.text()
@@ -110,14 +106,16 @@ new_rus_entry.setStyleSheet(
         hover_CSS
     )
 
-grid.addWidget(eng_button, 0, 0)
-grid.addWidget(new_eng_entry, 0,1)
+grid.addWidget(eng_button, 1, 0)
+grid.addWidget(new_eng_entry, 1,1)
 
-grid.addWidget(rus_button, 1, 0)
-grid.addWidget(new_rus_entry, 1,1)
+grid.addWidget(rus_button, 2, 0)
+grid.addWidget(new_rus_entry, 2,1)
 
-grid.addWidget(random_eng_button, 2, 0)
-grid.addWidget(random_rus_button, 2, 1)
+grid.addWidget(random_eng_button, 3, 0)
+grid.addWidget(random_rus_button, 3, 1)
+
+grid.addWidget(dict, 0, 0)
 
 window.setLayout(grid)
 window.show()
