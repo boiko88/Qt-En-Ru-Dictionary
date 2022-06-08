@@ -6,6 +6,7 @@ from PyQt5 import QtCore
 from PyQt5.QtGui import QCursor
 import random
 from css_styles import *
+import winsound
 
 
 # A Working Sample
@@ -28,28 +29,32 @@ def add_russian_word():
     actual_new_ru_word = new_rus_entry.text()
     with open ("russian_dictionary.csv", "a", newline="") as data_file:
         data_file.write(f"{actual_new_ru_word}\n")
+        winsound.PlaySound("click.wav", winsound.SND_ASYNC)
 
 def add_english_word():
     actual_new_eng_word = new_eng_entry.text()
     with open ("english_dictionary.csv", "a", newline="") as data_file:
         data_file.write(f"{actual_new_eng_word}\n")
+        winsound.PlaySound("click.wav", winsound.SND_ASYNC)
 
 def ask_random_eng_word():
-    with open ("english_dictionary.csv", "r", newline="") as dictionary:
+    with open ("english_dictionary.csv", "r", encoding='UTF8', newline="") as dictionary:
         eng_dict = dictionary
         actual_dictionary = []
         for line in eng_dict:
             actual_dictionary.append(line)
     print(random.choice(actual_dictionary))
+    winsound.PlaySound("click.wav", winsound.SND_ASYNC)
 
 
 def ask_random_rus_word():
-    with open ("russian_dictionary.csv", "r", newline="") as dictionary:
+    with open ("russian_dictionary.csv", "r", encoding='UTF8', newline="") as dictionary:
         eng_dict = dictionary
         actual_dictionary = []
         for line in eng_dict:
             actual_dictionary.append(line)
     print(random.choice(actual_dictionary))
+    winsound.PlaySound("click.wav", winsound.SND_ASYNC)
 
 
         
