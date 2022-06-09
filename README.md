@@ -8,4 +8,4 @@ TO DO list:
 
 2. Merge 2 dictionaries into 1 CSV file with rows, so all the data is sorted in a more intuitive way
 
-3. Add a sound to the buttons when they are clicked
+3. Add a sound to the buttons when they are clicked - Done

@@ -28,14 +28,20 @@ rus_dict = []
 def add_russian_word():
     actual_new_ru_word = new_rus_entry.text()
     with open ("russian_dictionary.csv", "a", newline="") as data_file:
-        data_file.write(f"{actual_new_ru_word}\n")
-        winsound.PlaySound("click.wav", winsound.SND_ASYNC)
+        if actual_new_ru_word == "":
+            print("Sorry, empty info cannot be added. Please make sure you actually write something.")
+        else:
+            data_file.write(f"{actual_new_ru_word}\n")
+            winsound.PlaySound("click.wav", winsound.SND_ASYNC)
 
 def add_english_word():
     actual_new_eng_word = new_eng_entry.text()
     with open ("english_dictionary.csv", "a", newline="") as data_file:
-        data_file.write(f"{actual_new_eng_word}\n")
-        winsound.PlaySound("click.wav", winsound.SND_ASYNC)
+        if actual_new_eng_word == "":
+            print("Sorry, empty info cannot be added. Please make sure you actually write something.")
+        else:
+            data_file.write(f"{actual_new_eng_word}\n")
+            winsound.PlaySound("click.wav", winsound.SND_ASYNC)
 
 def ask_random_eng_word():
     with open ("english_dictionary.csv", "r", encoding='UTF8', newline="") as dictionary:
