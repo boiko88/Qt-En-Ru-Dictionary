@@ -54,7 +54,7 @@ def ask_random_eng_word():
 
 
 def ask_random_rus_word():
-    with open ("russian_dictionary.csv", "r", encoding='UTF8', newline="") as dictionary:
+    with open ("russian_dictionary.csv", "r", encoding='cp1251', newline="") as dictionary:
         eng_dict = dictionary
         actual_dictionary = []
         for line in eng_dict:
@@ -108,25 +108,27 @@ random_rus_button.setStyleSheet(
 # Entry
 
 new_eng_entry = QLineEdit()
+new_eng_entry.setPlaceholderText("Type an English word here")
 new_eng_entry.setStyleSheet(
         hover_CSS
     )
 
 new_rus_entry = QLineEdit()
+new_rus_entry.setPlaceholderText("Type a Russia word here")
 new_rus_entry.setStyleSheet(
         hover_CSS
     )
+grid.addWidget(dict, 0, 0)
 
-grid.addWidget(eng_button, 1, 0)
-grid.addWidget(new_eng_entry, 1,1)
+grid.addWidget(eng_button, 2, 0)
+grid.addWidget(new_eng_entry, 1,0)
 
-grid.addWidget(rus_button, 2, 0)
-grid.addWidget(new_rus_entry, 2,1)
+grid.addWidget(rus_button, 2, 1)
+grid.addWidget(new_rus_entry, 1, 1)
 
 grid.addWidget(random_eng_button, 3, 0)
 grid.addWidget(random_rus_button, 3, 1)
 
-grid.addWidget(dict, 0, 0)
 
 window.setLayout(grid)
 window.show()
