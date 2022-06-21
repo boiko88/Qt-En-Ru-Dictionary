@@ -23,13 +23,15 @@ grid = QGridLayout()
 eng_dict = []
 rus_dict = []
 
+# Errors
+
+empty_data_error = "Sorry, empty info cannot be added. Please make sure you actually write something before adding it to the dictionary."
+
 # Functions
 
 
 def add_no_data_error():
-    print("Sorry, empty info cannot be added. Please make sure you actually write something before adding it to the dictionary.")
-    QMessageBox.about(window, "Empty Data Input",
-                      "Sorry, empty info cannot be added. Please make sure you actually write something before adding it to the dictionary.")
+    QMessageBox.about(window, "Empty Data Input", empty_data_error)
 
 
 def add_russian_word():
