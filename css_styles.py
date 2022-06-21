@@ -2,7 +2,7 @@
 # Beautiful CSS repeating code
 
 
-beautyful_btn_CSS = '''
+btn_CSS = '''
         *{
             border: 4px solid '#BC006C';
             border-radius: 25px;
@@ -27,7 +27,18 @@ hover_CSS = '''
         }
         '''
 
-
+label_css_layout = '''
+        *{  
+            border: 4px solid '#BC006C';
+            border-radius: 25px;
+            font-size: 35px;
+            color: 'white';
+            padding: 20px 0;
+            margin-left: 150px;
+            margin: 20px 20px;
+        }
+        
+        '''
 
 
 
