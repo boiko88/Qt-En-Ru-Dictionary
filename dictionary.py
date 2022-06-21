@@ -62,7 +62,6 @@ def ask_random_eng_word():
             actual_dictionary.append(line)
     revealed_word.setText(f"{random.choice(actual_dictionary)}")
     winsound.PlaySound("click.wav", winsound.SND_ASYNC)
-    
 
 
 def ask_random_rus_word():
@@ -137,16 +136,15 @@ new_rus_entry = QLineEdit()
 new_rus_entry.setPlaceholderText("Type a Russia word")
 new_rus_entry.setStyleSheet(
     hover_CSS
-    
+
 )
 
-# Label 
+# Label
 
 revealed_word = QLabel()
 revealed_word.setStyleSheet(
     label_css_layout
 )
-revealed_word.resize(300,300)
 
 # Grid all the elements
 
