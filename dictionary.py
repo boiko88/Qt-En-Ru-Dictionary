@@ -164,7 +164,7 @@ grid.addWidget(new_rus_entry, 2, 1)
 grid.addWidget(random_eng_button, 4, 0)
 grid.addWidget(random_rus_button, 4, 1)
 
-grid.addWidget(revealed_word, 0, 1)
+grid.addWidget(revealed_word, 5, 1)
 
 
 window.setLayout(grid)
