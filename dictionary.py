@@ -78,17 +78,17 @@ def ask_random_rus_word():
 
 # Display Pictures
 
-dict_image = QPixmap("dictionary_1.png")
+dict_image = QPixmap("images/dictionary_1.png")
 dict = QLabel()
 dict.setPixmap(dict_image)
 dict.setAlignment(QtCore.Qt.AlignCenter)
 
-english_flag = QPixmap("UK_Flag.png")
+english_flag = QPixmap("images/UK_Flag.png")
 uk_flag = QLabel()
 uk_flag.setPixmap(english_flag)
 uk_flag.setAlignment(QtCore.Qt.AlignCenter)
 
-russian_flag = QPixmap("RU_Flag.png")
+russian_flag = QPixmap("images/RU_Flag.png")
 ru_flag = QLabel()
 ru_flag.setPixmap(russian_flag)
 ru_flag.setAlignment(QtCore.Qt.AlignCenter)
